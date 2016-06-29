@@ -106,3 +106,63 @@ RingBuffer.prototype.enq = function(element) {
 RingBuffer.prototype.size = function() {
   return this._size;
 };
+
+/**
+ * Returns all elements of the queue
+ *
+ * @return {Array}
+ * @api public
+ */
+RingBuffer.prototype.dump = function() {
+  if (this.isEmpty()) throw new Error('RingBuffer is empty');
+
+  return this._elements;
+};
+
+/**
+ * Returns the sum of all elements of the queue
+ *
+ * @return {Number}
+ * @api public
+ */
+RingBuffer.prototype.sum = function() {
+  if (this.isEmpty()) throw new Error('RingBuffer is empty');
+
+  return this._elements.reduce((prev, curr) => prev + curr);
+};
+
+/**
+ * Returns the minimum of all elements of the queue
+ *
+ * @return {Number}
+ * @api public
+ */
+RingBuffer.prototype.min = function() {
+  if (this.isEmpty()) throw new Error('RingBuffer is empty');
+
+  return Math.min.apply(null, this._elements);
+};
+
+/**
+ * Returns the maximum of all elements of the queue
+ *
+ * @return {Number}
+ * @api public
+ */
+RingBuffer.prototype.max = function() {
+  if (this.isEmpty()) throw new Error('RingBuffer is empty');
+
+  return Math.max.apply(null, this._elements);
+};
+
+/**
+ * Returns the average of all elements of the queue
+ *
+ * @return {Number}
+ * @api public
+ */
+RingBuffer.prototype.avg = function() {
+  if (this.isEmpty()) throw new Error('RingBuffer is empty');
+
+  return this.sum() / this.size();
+};

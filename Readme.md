@@ -7,13 +7,13 @@ A simple ring buffer data structure for Node.js and the browser.
 As component for the browser:
 
 ```
-$ component install janogonzalez/ringbufferjs
+$ component install stheine/ringbufferjs
 ```
 
 As npm for Node.js:
 
 ```
-$ npm install ringbufferjs
+# TODO - not on npm yet
 ```
 
 ## Example
@@ -72,6 +72,31 @@ Throws an `Error` when the buffer is empty.
 ### RingBuffer#size()
 
 Returns the size of the ring buffer.
+
+### RingBuffer#dump()
+
+Returns all elements of the queue.
+Throws an `Error` when the buffer is empty.
+
+### RingBuffer#sum()
+
+Returns the sum of all elements of the queue.
+Throws an `Error` when the buffer is empty.
+
+### RingBuffer#min()
+
+Returns the minimum of all elements of the queue.
+Throws an `Error` when the buffer is empty.
+
+### RingBuffer#max()
+
+Returns the maximum of all elements of the queue.
+Throws an `Error` when the buffer is empty.
+
+### RingBuffer#avg()
+
+Returns the average of all elements of the queue.
+Throws an `Error` when the buffer is empty.
 
 ## Testing
 
