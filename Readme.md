@@ -20,7 +20,7 @@ $ component install stheine/ringbufferjs
 As npm for Node.js:
 
 ```
-# TODO - not on npm yet
+$ npm install @stheine/ringbufferjs
 ```
 
 ## Example
