@@ -1,6 +1,13 @@
-# ringbuffer.js
+# @stheine/ringbuffer.js
 
-A simple ring buffer data structure for Node.js and the browser.
+A ring buffer data structure for Node.js and the browser, extended with
+some functions for numeric data (`sum`, `min`, `max`, `avg`).
+
+## Reference
+
+This module is based on
+[ringbufferjs](https://www.npmjs.com/package/ringbufferjs) by
+[janogonzalez](https://www.npmjs.com/~janogonzalez).
 
 ## Installation
 

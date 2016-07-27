@@ -1,8 +1,11 @@
 {
-  "name": "ringbufferjs",
-  "version": "0.0.1",
+  "name": "@stheine/ringbufferjs",
+  "version": "0.1.0",
   "description": "a simple ring buffer data structure",
-  "author": "Jano González <info@janogonzalez.com>",
+  "contributors": [
+    "Jano González <info@janogonzalez.com>",
+    "Stefan Heine <stheine@arcor.de>"
+  ],
   "devDependencies": {
     "mocha": "*",
     "expect.js": "*"
