@@ -129,12 +129,25 @@ describe('RingBuffer()', function() {
       }).to.throwException('RingBuffer is empty');
     });
 
-    it('dumps the content of the ring buffer', function() {
+    it('dumps the content of the ring buffer, small buffer', function() {
       var buffer = new RingBuffer(2);
       buffer.enq(1);
       buffer.enq(2);
       buffer.enq(3);
       expect(buffer.dump()).to.eql([3, 2]);
+    });
+
+    it('dumps the content of the ring buffer, after enq() and deq()', function() {
+      var buffer = new RingBuffer(5);
+      buffer.enq(1);
+      buffer.enq(2);
+      buffer.enq(3);
+      buffer.enq(4);
+      buffer.enq(5);
+      buffer.enq(6);
+      expect(buffer.deq()).to.be(2);
+      expect(buffer.deq()).to.be(3);
+      expect(buffer.dump()).to.eql([6, 4, 5]);
     });
   });
 

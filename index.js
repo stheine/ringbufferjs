@@ -71,6 +71,7 @@ RingBuffer.prototype.peek = function() {
 RingBuffer.prototype.deq = function() {
   var element = this.peek();
 
+  Reflect.deleteProperty(this._elements, this._first);
   this._size--;
   this._first = (this._first + 1) % this.capacity();
 
@@ -116,7 +117,7 @@ RingBuffer.prototype.size = function() {
 RingBuffer.prototype.dump = function() {
   if (this.isEmpty()) throw new Error('RingBuffer is empty');
 
-  return this._elements;
+  return this._elements.filter(el => el != null && el != undefined);
 };
 
 /**
