@@ -3,3 +3,6 @@ components
 build
 # NPM
 node_modules
+package-lock.json
+# Swap files
+*.swp
