@@ -1,6 +1,6 @@
 {
   "name": "@stheine/ringbufferjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A ring buffer data structure for Node.js and the browser, extended with some functions for numeric data (sum, min, max, avg).",
   "contributors": [
     "Jano González <info@janogonzalez.com>",
